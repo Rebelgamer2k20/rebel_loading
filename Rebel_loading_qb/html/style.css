@@ -56,3 +56,15 @@ body {
     z-index: 1000;
     pointer-events: none;
 }
+
+#loading-screen {
+    display: flex !important;
+}
+
+#server-logo {
+    margin-top: 60px; /* Adjust as needed */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 200px;
+}

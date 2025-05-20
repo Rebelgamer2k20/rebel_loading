@@ -1,6 +1,7 @@
 -- Make sure config.lua is loaded before this script
 
 RegisterNetEvent('rebel_loading:showLoading', function()
+    print("SHOW LOADING EVENT FIRED")
     SetNuiFocus(false, false)
     SendNUIMessage({ type = "showLoading" })
 end)
@@ -16,6 +17,12 @@ end)
 
 AddEventHandler('playerSpawned', function()
     TriggerEvent('rebel_loading:hideLoading')
+end)
+
+AddEventHandler('onClientResourceStart', function(resource)
+    if resource == GetCurrentResourceName() then
+        TriggerEvent('rebel_loading:showLoading')
+    end
 end)
 
 Citizen.CreateThread(function()
