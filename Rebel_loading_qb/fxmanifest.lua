@@ -1,10 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Your Name'
-description 'Custom Loading Screen for FiveM'
-version '1.0.0'
-
 ui_page 'html/index.html'
 
 files {
@@ -12,12 +8,9 @@ files {
     'html/style.css',
     'html/script.js',
     'html/logo.png',
-    'html/your-video.mp4',
-    'html/music1.mp3',
-    -- add any other assets here
+    'html/your-video.mp3',
+    'html/music1.mp3'
+    -- Add any additional assets (images, music, video) here as needed
 }
 
-client_scripts {
-    'config.lua',
-    'client.lua'
-}
+-- No client_scripts or server_scripts for a true loading screen resource!

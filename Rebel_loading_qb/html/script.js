@@ -108,4 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('rules-btn').onclick = () => showPage('rules-page');
     document.getElementById('updates-btn').onclick = () => showPage('updates-page');
     document.getElementById('events-btn').onclick = () => showPage('events-page');
+
+    fetch('config.json')
+      .then(response => response.json())
+      .then(config => {
+        document.getElementById('server-name').innerText = config.serverName;
+        document.getElementById('server-logo').src = config.serverLogo;
+        document.getElementById('bg-video').src = config.video;
+        // ...populate staff, rules, updates, events, music, etc.
+      });
 });
