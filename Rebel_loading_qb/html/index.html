@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Loading Screen Overlay -->
+    <div id="loading-screen">
+        <div id="loading-text">Loading... 0%</div>
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
     <div class="loading-container">
         <img id="server-logo" src="logo.png" alt="Server Logo">
+        <video id="bg-video" src="your-video.mp4" autoplay loop muted></video>
         <h1 id="server-name">Welcome to the Server!</h1>
         <div class="media-section">
-            <video id="bg-video" src="your-video.mp4" autoplay loop muted></video>
             <audio id="music-player" src="music1.mp3"></audio>
             <div class="music-controls">
                 <button id="prev-btn">Last</button>

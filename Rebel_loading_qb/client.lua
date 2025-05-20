@@ -1,8 +1,18 @@
--- Make sure to load config.lua before this script
+-- Make sure config.lua is loaded before this script
+
+RegisterNetEvent('rebel_loading:showLoading', function()
+    SetNuiFocus(true, true)
+    SendNUIMessage({ type = "showLoading" })
+end)
+
+RegisterNetEvent('rebel_loading:hideLoading', function()
+    SetNuiFocus(false, false)
+    SendNUIMessage({ type = "hideLoading" })
+end)
 
 Citizen.CreateThread(function()
-    -- Wait for NUI to be ready
-    Citizen.Wait(1000)
+    -- Send config to NUI when resource starts
+    Citizen.Wait(500)
     SendNUIMessage({
         type = "updateConfig",
         serverName = Config.ServerName,
@@ -14,20 +24,4 @@ Citizen.CreateThread(function()
         updates = Config.Updates,
         events = Config.Events
     })
-end)
-
-local function sendConfigToNUI()
-    SendNUIMessage({
-        type = "updateConfig",
-        serverName = Config.ServerName,
-        staff = Config.Staff,
-        rules = Config.Rules
-    })
-end
-
-RegisterNetEvent('onClientResourceStart')
-AddEventHandler('onClientResourceStart', function(resourceName)
-    if resourceName == GetCurrentResourceName() then
-        sendConfigToNUI()
-    end
 end)
