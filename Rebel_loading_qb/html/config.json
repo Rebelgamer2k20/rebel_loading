@@ -1,29 +1,20 @@
-Config = {}
-
-Config.ServerName = "Welcome to Rebel Loading!"
-
-Config.ServerLogo = "logo.png" -- Path to your logo image (place in html folder or use a URL)
-
-Config.Music = {
-    "music1.mp3" -- Add more mp3 file names or URLs as needed
-}
-
-Config.Video = "your-video.mp4" -- Path to your video file or a video URL
-
-Config.Staff = {
-    {role = "Admin", name = "JohnDoe"},
-    {role = "Moderator", name = "JaneSmith"}
-}
-
-Config.Rules = {
+{
+  "serverName": "Welcome to Rebel Loading!",
+  "serverLogo": "logo.png",
+  "music": ["music1.mp3"],
+  "video": "your-video.mp4",
+  "staff": [
+    {"role": "Admin", "name": "JohnDoe"},
+    {"role": "Moderator", "name": "JaneSmith"}
+  ],
+  "rules": [
     "No cheating or exploiting.",
     "Respect all players and staff."
-}
-
-Config.Updates = {
+  ],
+  "updates": [
     "Added new cars!"
-}
-
-Config.Events = {
+  ],
+  "events": [
     "Car Meet - Saturday 8PM"
+  ]
 }

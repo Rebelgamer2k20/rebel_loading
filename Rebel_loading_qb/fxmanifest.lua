@@ -8,8 +8,9 @@ files {
     'html/style.css',
     'html/script.js',
     'html/logo.png',
-    'html/your-video.mp3',
+    'html/your-video.mp4',
     'html/music1.mp3'
+    'html/config.json'
     -- Add any additional assets (images, music, video) here as needed
 }
 
