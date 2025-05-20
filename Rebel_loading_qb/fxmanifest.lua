@@ -9,9 +9,6 @@ files {
     'html/script.js',
     'html/logo.png',
     'html/your-video.mp4',
-    'html/music1.mp3'
-    'html/config.json'
-    -- Add any additional assets (images, music, video) here as needed
+    'html/music1.mp3',
+    'html/config.json',
 }
-
--- No client_scripts or server_scripts for a true loading screen resource!
