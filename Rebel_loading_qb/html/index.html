@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-container">
+        <img id="server-logo" src="logo.png" alt="Server Logo">
+        <h1 id="server-name">Welcome to the Server!</h1>
+        <div class="media-section">
+            <video id="bg-video" src="your-video.mp4" autoplay loop muted></video>
+            <audio id="music-player" src="music1.mp3"></audio>
+            <div class="music-controls">
+                <button id="prev-btn">Last</button>
+                <button id="play-pause-btn">Pause</button>
+                <button id="next-btn">Next</button>
+                <label for="volume-slider" class="volume-label">Volume:</label>
+                <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="0.5" title="Adjust volume">
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="info-nav">
+                <button id="staff-btn">Staff</button>
+                <button id="rules-btn">Rules</button>
+                <button id="updates-btn">Server Updates</button>
+                <button id="events-btn">Upcoming Events</button>
+            </div>
+            <div id="staff-page" class="info-page">
+                <h2>Staff Members</h2>
+                <ul id="staff-list">
+                    <!-- Staff will be injected here -->
+                </ul>
+            </div>
+            <div id="rules-page" class="info-page">
+                <h2>Server Rules</h2>
+                <ol id="rules-list">
+                    <!-- Rules will be injected here -->
+                </ol>
+            </div>
+            <div id="updates-page" class="info-page">
+                <h2>Server Updates</h2>
+                <ul id="updates-list">
+                    <!-- Updates will be injected here -->
+                </ul>
+            </div>
+            <div id="events-page" class="info-page">
+                <h2>Upcoming Events</h2>
+                <ul id="events-list">
+                    <!-- Events will be injected here -->
+                </ul>
+            </div>
+        </div>
+        <div class="spinner"></div>
+    </div>
+    <div class="copyright">© 2025 rebel_loading</div>
+    <script src="script.js"></script>
+</body>
+</html>
