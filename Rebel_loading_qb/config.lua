@@ -5,11 +5,11 @@ Config.ServerName = "My Awesome Server"
 Config.ServerLogo = "logo.png" -- Path to your logo image (place in html folder or use a URL)
 
 Config.Music = {
-    "music1.mp3", -- Add more mp3 file names or URLs as needed
-    "music2.mp3"
+    "Masked Wolf - Astronaut In The Ocean (Official Music Video).mp3" -- Add more mp3 file names or URLs as needed
+   
 }
 
-Config.Video = "your-video.mp4" -- Path to your video file or a video URL
+Config.Video = "No_audio_loading_screen.mp4" -- Path to your video file or a video URL
 
 Config.Staff = {
     {role = "Admin", name = "JohnDoe"},
