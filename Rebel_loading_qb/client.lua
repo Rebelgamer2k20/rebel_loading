@@ -1,7 +1,7 @@
 -- Make sure config.lua is loaded before this script
 
 RegisterNetEvent('rebel_loading:showLoading', function()
-    SetNuiFocus(true, true)
+    SetNuiFocus(false, false)
     SendNUIMessage({ type = "showLoading" })
 end)
 
@@ -10,8 +10,15 @@ RegisterNetEvent('rebel_loading:hideLoading', function()
     SendNUIMessage({ type = "hideLoading" })
 end)
 
+AddEventHandler('onClientMapStart', function()
+    TriggerEvent('rebel_loading:showLoading')
+end)
+
+AddEventHandler('playerSpawned', function()
+    TriggerEvent('rebel_loading:hideLoading')
+end)
+
 Citizen.CreateThread(function()
-    -- Send config to NUI when resource starts
     Citizen.Wait(500)
     SendNUIMessage({
         type = "updateConfig",
@@ -25,5 +32,3 @@ Citizen.CreateThread(function()
         events = Config.Events
     })
 end)
-
-TriggerEvent('rebel_loading:showLoading')
