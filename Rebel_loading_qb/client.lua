@@ -25,3 +25,5 @@ Citizen.CreateThread(function()
         events = Config.Events
     })
 end)
+
+TriggerEvent('rebel_loading:showLoading')
