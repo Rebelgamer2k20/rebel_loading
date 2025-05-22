@@ -10,5 +10,5 @@ files {
     'html/logo.png',
     'html/your-video.mp4',
     'html/music1.mp3',
-    'html/config.json',
+    'html/config.json'
 }
