@@ -68,3 +68,20 @@ body {
     margin-right: auto;
     max-width: 200px;
 }
+
+/* Progress bar styling */
+.progress-bar-container {
+    width: 80%;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ecf0f1;
+    transition: width 0.5s ease;
+}
